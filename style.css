@@ -76,7 +76,13 @@ nav ul li{
     margin: 15px auto;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
+#masterPlay {
+    font-size: 24px; /* Adjust the size as needed */
+}
+
+
 .icons i{
     cursor: pointer;
 }
@@ -129,6 +135,11 @@ nav ul li{
 }
 
 .songInfo img{
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+#nowPlaying{
     opacity: 0;
     transition: opacity 0.3s ease-in;
 }
