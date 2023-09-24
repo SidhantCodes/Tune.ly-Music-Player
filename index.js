@@ -31,9 +31,14 @@ masterPlay.addEventListener('click', () => {
 });
 
 // audioElement.play();
-myProgressBar.addEventListener('timeupdate', ()=>{
+audioElement.addEventListener('timeupdate', ()=>{
     console.log('timeupdate');
-
+    progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
+    console.log(progress);
+    myProgressBar.value = progress;
 });
 
+myProgressBar.addEventListener('change', ()=>{
+    audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
+});
 
